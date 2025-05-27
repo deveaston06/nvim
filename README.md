@@ -5,12 +5,19 @@ Refer to the [documentation](https://lazyvim.github.io/installation) to get star
 
 #### Instructions from the Documentation
 
+Clone the repository
+```
+git clone https://github.com/deveaston06/nvim.git $HOME/.config/nvim
+```
+
+Install one of the [Nerdfonts](https://www.nerdfonts.com/)
+
+#### For Newest Debian and Ubuntu
+
 Run the commands to setup from a new brand machine
 ```
 sudo apt install luarocks fzf gcc g++ libstdc++6 lazygit
 ```
-
-Install one of the [Nerdfonts](https://www.nerdfonts.com/)
 
 #### For Debian 12 "Bookworm", Ubuntu 25.04 "Plucky Puffin" and earlier:
 
