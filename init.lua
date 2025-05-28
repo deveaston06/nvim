@@ -20,7 +20,6 @@ require("material").setup({
   },
 })
 
-local set = vim.opt -- set options
-set.clipboard = "unnamedplus"
+vim.g.clipboard = "xsel"
 
 vim.cmd("colorscheme material")
