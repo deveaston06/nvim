@@ -2,10 +2,9 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- default map options
-local opts = { noremap = true, silent = true }
+local wk = require("which-key")
 
--- remove ^M after <p> from Windows System Clipboard
-vim.keymap.set("n", "gm", function()
-  vim.cmd(":%s/\r//g")
-end, opts)
+wk.add({
+  {"<leader>m", "<cmd>silent! keeppatterns %s/\\r//g<cr>", desc="remove ^M", mode="n"}
+})
+
