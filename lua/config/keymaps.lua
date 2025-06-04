@@ -4,7 +4,18 @@
 
 local wk = require("which-key")
 
-wk.add({
-  {"<leader>m", "<cmd>silent! keeppatterns %s/\\r//g<cr>", desc="remove ^M", mode="n"}
-})
+local windowsIcon = {
+  icon = "󰖳",
+  color = "blue",
+}
 
+wk.add({
+  {
+    "<leader>m",
+    "<cmd>silent! keeppatterns %s/\\r//g<cr>",
+    icon=windowsIcon,
+    desc="Remove ^M",
+    mode="n"
+  },
+  {"<leader>p", "\"_dP", icon="", desc="Void Del + Paste", mode="x"},
+})
