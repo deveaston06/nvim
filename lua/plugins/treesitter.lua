@@ -45,6 +45,8 @@ return {
         "vim",
         "yaml",
         "svelte",
+        "dot",
+        "asm",
       })
     end,
   },

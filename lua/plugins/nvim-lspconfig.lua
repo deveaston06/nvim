@@ -10,6 +10,7 @@ return {
         pyright = {},
         tsserver = {},
         svelte = {},
+        dotls= {},
       },
        setup = {
         -- example to setup with typescript.nvim
