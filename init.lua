@@ -23,3 +23,6 @@ require("material").setup({
 vim.g.clipboard = "xsel"
 
 vim.cmd("colorscheme material")
+
+vim.g.python_host_prog = "/home/jesh/venvs/.nvim-venv/bin/python"
+vim.g.python3_host_prog = "/home/jesh/venvs/.nvim-venv/bin/python"
