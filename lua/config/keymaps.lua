@@ -17,5 +17,11 @@ wk.add({
     desc="Remove ^M",
     mode="n"
   },
+	{
+		"<leader>fh",
+		"<cmd>Telescope find_files hidden=true<cr>",
+		desc="Telescope Find Hidden",
+		mode={"n", "v"},
+	},
   {"<leader>p", "\"_dP", icon="", desc="Void Del + Paste", mode="x"},
 })
