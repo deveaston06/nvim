@@ -3,5 +3,6 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.expandtab = false -- Use tabs instead of spaces
-opt.tabstop = 2     -- Number of spaces a tab represents
-opt.shiftwidth = 2  -- Number of spaces to use for autoindent
+opt.tabstop = 2 -- Number of spaces a tab represents
+opt.shiftwidth = 2 -- Number of spaces to use for autoindent
+opt.cursorline = false -- disable line highlighting effect for the cursor
