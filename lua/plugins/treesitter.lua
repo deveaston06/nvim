@@ -47,6 +47,7 @@ return {
         "svelte",
         "dot",
         "asm",
+        "cpp",
       })
     end,
   },
