@@ -2,9 +2,8 @@ return {
   "yetone/avante.nvim",
   -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
   -- ⚠️ must add this setting! ! !
-  build = vim.fn.has("win32") ~= 0
-      and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
-      or "make",
+  build = vim.fn.has("win32") ~= 0 and "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
+    or "make",
   event = "VeryLazy",
   version = false, -- Never set this value to "*"! Never!
   ---@module 'avante'
@@ -12,24 +11,14 @@ return {
   opts = {
     -- add any opts here
     -- for example
-    provider = "claude",
-    providers = {
-      claude = {
-        endpoint = "https://api.anthropic.com",
-        model = "claude-sonnet-4-20250514",
-        timeout = 30000, -- Timeout in milliseconds
-          extra_request_body = {
-            temperature = 0.75,
-            max_tokens = 20480,
-          },
-      },
-      moonshot = {
-        endpoint = "https://api.moonshot.ai/v1",
-        model = "kimi-k2-0711-preview",
-        timeout = 30000, -- Timeout in milliseconds
-        extra_request_body = {
-          temperature = 0.75,
-          max_tokens = 32768,
+    provider = "gemini-cli",
+    acp_providers = {
+      ["gemini-cli"] = {
+        command = "gemini",
+        args = { "--experimental-acp" },
+        env = {
+          NODE_NO_WARNINGS = "1",
+          GEMINI_API_KEY = os.getenv("GEMINI_API_KEY"),
         },
       },
     },
@@ -65,7 +54,7 @@ return {
     },
     {
       -- Make sure to set this up properly if you have lazy=true
-      'MeanderingProgrammer/render-markdown.nvim',
+      "MeanderingProgrammer/render-markdown.nvim",
       opts = {
         file_types = { "markdown", "Avante" },
       },
