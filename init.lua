@@ -1,8 +1,12 @@
 -- bootstrap lazy.nvim, LazyVim and your plugins
 require("config.lazy")
 
-vim.g.material_style = "palenight"
+local global = vim.g
+global.material_style = "palenight"
 require("material").setup({
+  contrast = {
+    cursor_line = true, -- turns off the cursor line for some reason (true means no curosr line)
+  },
   styles = { -- Give comments style such as bold, italic, underline etc.
     comments = { italic = false },
   },
@@ -23,6 +27,3 @@ require("material").setup({
 -- vim.g.clipboard = "xsel"
 
 vim.cmd("colorscheme material")
-
-vim.g.python_host_prog = "/home/jesh/venvs/.nvim-venv/bin/python"
-vim.g.python3_host_prog = "/home/jesh/venvs/.nvim-venv/bin/python"

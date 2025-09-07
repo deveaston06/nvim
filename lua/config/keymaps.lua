@@ -13,15 +13,19 @@ wk.add({
   {
     "<leader>m",
     "<cmd>silent! keeppatterns %s/\\r//g<cr>",
-    icon=windowsIcon,
-    desc="Remove ^M",
-    mode="n"
+    icon = windowsIcon,
+    desc = "Remove ^M",
+    mode = "n",
   },
-	{
-		"<leader>fh",
-		"<cmd>Telescope find_files hidden=true<cr>",
-		desc="Telescope Find Hidden",
-		mode={"n", "v"},
-	},
-  {"<leader>p", "\"_dP", icon="", desc="Void Del + Paste", mode="x"},
+  {
+    "<leader>fh",
+    "<cmd>Telescope find_files hidden=true<cr>",
+    desc = "Telescope Find Hidden",
+    mode = { "n", "v" },
+  },
+  { "<leader>p", '"_dP', icon = "", desc = "Void Del + Paste", mode = "x" },
+  { "<C-d>", "<C-d>zz" },
+  { "<C-u>", "<C-u>zz" },
+  { "n", "nzzzv" },
+  { "N", "Nzzzv" },
 })
