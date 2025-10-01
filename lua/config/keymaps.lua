@@ -28,4 +28,5 @@ wk.add({
   { "<C-u>", "<C-u>zz" },
   { "n", "nzzzv" },
   { "N", "Nzzzv" },
+  { "<leader>rr", "<cmd>LspRestart<cr>", icon = "󰛔", desc = "Restart LSP", mode = "n" },
 })
