@@ -46,6 +46,7 @@ return {
             clangdFileStatus = true,
           },
         },
+        vtsls = {},
       },
       setup = {
         -- example to setup with typescript.nvim
@@ -59,6 +60,25 @@ return {
           return false
         end,
       },
+      config = function()
+        local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+        local svelte_lsp_capabilities = vim.tbl_deep_extend("force", {}, capabilities)
+        svelte_lsp_capabilities.workspace = { didChangeWatchedFiles = false }
+        vim.lsp.config("svelte", {
+          capabilities = svelte_lsp_capabilities,
+          filetypes = { "svelte" },
+          settings = {
+            svelte = {
+              plugin = {
+                svelte = {
+                  defaultScriptLanguage = "ts",
+                },
+              },
+            },
+          },
+        })
+      end,
     },
   },
   --
