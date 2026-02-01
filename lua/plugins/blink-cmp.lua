@@ -12,7 +12,7 @@ return {
     "saghen/blink.cmp",
     opts = {
       keymap = {
-        preset = "none",
+        preset = "default",
         ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
         ["<C-e>"] = { "hide" },
         ["<Tab>"] = { "select_and_accept", "fallback" },

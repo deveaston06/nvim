@@ -47,6 +47,7 @@ return {
           },
         },
         vtsls = {},
+        tailwindcss = {},
       },
       setup = {
         -- example to setup with typescript.nvim

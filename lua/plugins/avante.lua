@@ -9,6 +9,13 @@ return {
   ---@module 'avante'
   ---@type avante.Config
   opts = function(_, opts)
+    -- how this does not work???
+    vim.tbl_deep_extend("force", opts, {
+      selection = {
+        hint_display = "none",
+      },
+    })
+
     -- Merge original opts
     opts.provider = "gemini-cli"
     opts.acp_providers = {
